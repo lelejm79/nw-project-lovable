@@ -36,6 +36,6 @@ npm run build
 npm run preview
 ```
 
-A pasta gerada para publicação é `dist`. Em uma hospedagem como Vercel ou Cloudflare Pages, use o comando de build `npm run build` e a pasta de saída `dist`. Configure `VITE_CHECKOUT_URL` e `VITE_VSL_VIDEO_URL` nas variáveis de ambiente da hospedagem antes de publicar; variáveis `VITE_` são incluídas no código público, portanto não coloque segredos nelas.
+A pasta gerada para publicação é `dist`. Em uma hospedagem como Vercel ou Cloudflare Pages, use o comando de build `npm run build` e a pasta de saída `dist`. Na Vercel, importe este repositório e mantenha o framework como Vite (ou deixe a detecção automática), com Build Command `npm run build` e Output Directory `dist`. Em **Settings → Environment Variables**, configure `VITE_CHECKOUT_URL` com o checkout real da Kiwify. Opcionalmente, configure `VITE_VSL_VIDEO_URL` e `VITE_CONTACT_EMAIL`. Depois de adicionar ou alterar variáveis, faça um novo deploy. Variáveis `VITE_` são incluídas no código público, portanto não coloque segredos nelas.
 
 O conteúdo é educacional e de desenvolvimento pessoal. Não promete resultados financeiros, médicos ou pessoais garantidos.
