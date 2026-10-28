@@ -8,6 +8,7 @@ const PRODUCT_NAME = "O Código da Manifestação";
 const PRICE = "R$ 27,90";
 const VSL_VIDEO_URL = import.meta.env.VITE_VSL_VIDEO_URL?.trim() ?? "";
 const CHECKOUT_URL = import.meta.env.VITE_CHECKOUT_URL?.trim() ?? "";
+const CONTACT_EMAIL = import.meta.env.VITE_CONTACT_EMAIL?.trim() ?? "";
 
 const faqs = [
   { q: "O que é O Código da Manifestação?", a: "É um ebook digital sobre Lei da Atração, desenvolvimento pessoal, mentalidade e práticas de reflexão." },
@@ -150,7 +151,7 @@ export default function App() {
       <section className="final-cta"><div className="final-ornament"><Sparkles size={28} /></div><div className="section-label">O PRIMEIRO PASSO É A CONSCIÊNCIA</div><h2>Uma nova maneira de olhar para seus pensamentos pode ser o começo de <em>uma nova jornada.</em></h2><p>Explore O Código da Manifestação e descubra práticas que podem ajudar você a desenvolver mais consciência, clareza e intenção no dia a dia.</p><div className="final-price">{PRICE}</div><CheckoutButton>QUERO COMEÇAR MINHA JORNADA <ArrowRight size={17} /></CheckoutButton></section>
     </main>
 
-    <footer className="footer"><a className="brand" href="#inicio"><span className="brand-mark"><Sparkles size={16} /></span><span>O CÓDIGO <i>DA MANIFESTAÇÃO</i></span></a><p>Um material de desenvolvimento pessoal.</p><div className="footer-links"><a href="/privacidade.html">Privacidade</a><a href="/termos.html">Termos de uso</a><a href="mailto:SEU-EMAIL-DE-CONTATO">Contato</a></div><p className="disclaimer">O conteúdo é educacional e não constitui aconselhamento médico, psicológico ou financeiro. A Lei da Atração é apresentada como uma abordagem de desenvolvimento pessoal, não como garantia científica de resultados.</p><p className="copyright">© {new Date().getFullYear()} O Código da Manifestação. Todos os direitos reservados.</p></footer>
+    <footer className="footer"><a className="brand" href="#inicio"><span className="brand-mark"><Sparkles size={16} /></span><span>O CÓDIGO <i>DA MANIFESTAÇÃO</i></span></a><p>Um material de desenvolvimento pessoal.</p><div className="footer-links"><a href="/privacidade.html">Privacidade</a><a href="/termos.html">Termos de uso</a>{CONTACT_EMAIL ? <a href={`mailto:${CONTACT_EMAIL}`}>Contato</a> : <span className="footer-contact-pending" title="Configure VITE_CONTACT_EMAIL antes de publicar">Contato em configuração</span>}</div><p className="disclaimer">O conteúdo é educacional e não constitui aconselhamento médico, psicológico ou financeiro. A Lei da Atração é apresentada como uma abordagem de desenvolvimento pessoal, não como garantia científica de resultados.</p><p className="copyright">© {new Date().getFullYear()} O Código da Manifestação. Todos os direitos reservados.</p></footer>
 
     {showSticky && <div className="sticky-cta"><div><strong>{PRODUCT_NAME}</strong><span>{PRICE}</span></div><CheckoutButton>QUERO ACESSAR <ArrowRight size={15} /></CheckoutButton></div>}
   </div>;
