@@ -2,3 +2,50 @@
 @media(min-width:1200px){.hero{padding-top:88px}.vsl-shell{max-width:850px}}
 @media(max-width:760px){.section-wrap,.site-header,.footer{width:calc(100% - 36px)}.site-header{height:72px}.brand{font-size:9px;letter-spacing:1px}.brand i{font-size:8px}.brand-mark{width:30px;height:30px}.menu-toggle{display:block;padding:8px}.nav{display:none;position:absolute;top:71px;left:-18px;right:-18px;background:#171027;border-bottom:1px solid var(--line);padding:20px;flex-direction:column;align-items:stretch;gap:20px}.nav.nav-open{display:flex}.nav-cta{justify-content:center}.hero{padding-top:55px;padding-bottom:45px}.eyebrow{font-size:8px;letter-spacing:1.5px;line-height:1.6}.hero h1{font-size:clamp(34px,9vw,48px)}.hero-sub{font-size:13px;line-height:1.8;margin-bottom:25px}.vsl-shell{padding:7px;border-radius:5px}.vsl-topline{font-size:7px;letter-spacing:1px;padding-bottom:9px}.video-orbit{width:180px;height:180px}.orbit-two{width:125px;height:125px}.video-center{gap:7px;width:85%}.video-center span{font-size:6px;letter-spacing:1.3px}.video-center strong{font-size:20px}.video-center svg{width:22px}.play-button{width:44px;height:44px;top:77%}.play-button svg{width:19px}.video-caption{font-size:6px;bottom:8px;left:8px}.under-video{font-size:7px;letter-spacing:0;padding:10px 2px 2px}.under-video span:last-child{display:none}.hero-buy .button{width:100%;min-width:0}.scroll-cue{margin-top:28px}.reflection{padding-top:65px;padding-bottom:68px}.reflection-grid,.method-grid,.contents-heading,.audience-grid,.faq{grid-template-columns:1fr;gap:25px}.reflection h2,.contents h2,.method h2,.audience h2,.faq h2{font-size:34px}.reflection-copy{font-size:13px}.problem-cards{grid-template-columns:1fr;gap:10px;margin-top:25px}.glass-card{min-height:0;padding:20px}.card-icon{margin-bottom:15px}.manifesto{padding:76px 20px}.manifesto h2{font-size:34px}.manifesto p{font-size:13px}.method{padding-top:70px;padding-bottom:70px}.method-grid{gap:15px}.method-copy .lead{font-size:15px}.method-copy .button{width:100%;padding-inline:12px;font-size:10px}.book-scene{min-height:360px}.pillars{grid-template-columns:repeat(2,1fr);gap:25px 12px;margin-top:45px;padding-top:25px}.pillars article{padding:0}.contents{padding-top:68px;padding-bottom:65px}.contents-heading{gap:15px;margin-bottom:25px}.contents-heading h2{margin-top:17px}.contents-item{grid-template-columns:32px 1fr 20px;padding:15px 1px}.contents-item p{font-size:12px}.audience{padding-top:0;padding-bottom:70px}.audience-grid{gap:20px}.audience-list p{font-size:12px;line-height:1.6}.audience-note{padding:22px}.offer-section{padding:65px 16px}.offer-card{padding:30px 19px 25px}.offer-card .book-scene{min-height:265px;transform:scale(.76);margin:-10px auto -15px}.offer-card h2{font-size:29px}.offer-price{font-size:43px}.faq{padding-top:70px;padding-bottom:75px;gap:25px}.faq-item>button{font-size:12px;padding:18px 0}.final-cta{padding:72px 20px 85px}.final-cta h2{font-size:34px}.footer{grid-template-columns:1fr;gap:15px;padding-top:25px;padding-bottom:100px}.footer-links{flex-wrap:wrap;gap:16px}.disclaimer,.copyright{grid-column:auto}.sticky-cta{padding:10px 12px}.sticky-cta strong{font-size:10px}.sticky-cta span{font-size:15px}.sticky-cta .button{min-height:40px;font-size:8px;padding:0 12px;gap:6px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Refinamento visual premium: profundidade, foco acessível e microinterações */
+:root{color-scheme:dark;--gold-deep:#b88b43;--surface-glass:rgba(255,255,255,.035)}
+::selection{background:#d8b86d;color:#21152b}
+:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+.site-shell{isolation:isolate}
+.site-header{backdrop-filter:blur(12px)}
+.brand{transition:opacity .2s ease}
+.brand:hover{opacity:.82}
+.nav-cta{transition:background .2s ease,border-color .2s ease,transform .2s ease}
+.nav-cta:hover{background:#e7c77e12;border-color:#e7c77e70;transform:translateY(-1px)}
+.hero{isolation:isolate}
+.hero:before{content:"";position:absolute;z-index:-1;pointer-events:none;width:min(780px,90vw);height:430px;top:35px;left:50%;transform:translateX(-50%);background:radial-gradient(ellipse at center,#8f5bb21c 0%,#5b34730d 44%,transparent 72%)}
+.hero h1 span{background:linear-gradient(110deg,#fff0bf 4%,#e7c77e 48%,#c7a45c 92%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.vsl-shell{transition:border-color .25s ease,box-shadow .25s ease}
+.vsl-shell:hover{border-color:#e7c77e55;box-shadow:0 28px 100px #05030baa,0 0 35px #b78a4a0c}
+.video-placeholder:focus-visible{outline-offset:5px}
+.button-gold{background:linear-gradient(115deg,#f7e6b4 0%,#e7c77e 48%,#c89c50 100%);box-shadow:0 7px 22px #c89c501c,inset 0 1px #fff6d7a8}
+.button-gold:hover{background:linear-gradient(115deg,#fff0c6 0%,#f0d48f 48%,#d6ad62 100%);box-shadow:0 10px 30px #e7c77e30,inset 0 1px #fff9e4}
+.glass-card{transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.glass-card:hover{transform:translateY(-4px);border-color:#e7c77e45;background:linear-gradient(145deg,#ffffff0b,#ffffff03)}
+.glass-card:hover .card-icon{background:#e7c77e0b}
+.pillars article{transition:transform .25s ease}
+.pillars article:hover{transform:translateY(-3px)}
+.pillars article:hover .pillar-icon{background:#e7c77e0d;border-color:#e7c77e60}
+.contents-item{transition:padding .2s ease,background .2s ease}
+.contents-item:hover{padding-left:12px;padding-right:12px;background:linear-gradient(90deg,#e7c77e09,transparent)}
+.book{transition:transform .35s ease,box-shadow .35s ease}
+.book-scene:hover .book{transform:rotateY(-3deg) rotateX(1deg) translateY(-4px);box-shadow:15px 25px 38px #05030b8c,-3px 0 0 #a78c5940,0 0 32px #d7b86c0b}
+.offer-card{box-shadow:0 25px 80px #05030b70,0 0 0 1px #e7c77e08}
+.offer-button{box-shadow:0 9px 28px #e7c77e20,inset 0 1px #fff6d7a8}
+.faq-item>button{transition:color .2s ease}
+.faq-item>button:hover{color:var(--gold-light)}
+.footer-links a,.text-link{transition:color .2s ease}
+.sticky-cta{padding-bottom:max(12px,env(safe-area-inset-bottom))}
+@media(max-width:760px){
+  .hero:before{height:300px;top:20px}
+  .glass-card:hover{transform:none}
+  .contents-item:hover{padding-left:5px;padding-right:5px}
+  .book-scene:hover .book{transform:rotateY(-8deg) rotateX(2deg)}
+}
+@media(hover:none){
+  .glass-card:hover,.pillars article:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .brand,.nav-cta,.vsl-shell,.button-gold,.glass-card,.pillars article,.contents-item,.book,.faq-item>button,.footer-links a,.text-link{transition:none!important}
+}
