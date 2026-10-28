@@ -135,7 +135,7 @@ export default function App() {
         <div className="contents-list">
           {["Introdução à Lei da Atração","Crenças e padrões mentais","O subconsciente e os hábitos","Clareza para definir seus objetivos","Exercícios de visualização","Afirmações conscientes","Uma rotina de reflexão","Transformar intenções em atitudes","Consistência no desenvolvimento pessoal"].map((item, i) => <div className="contents-item" key={item}><span>{String(i + 1).padStart(2, "0")}</span><p>{item}</p><Check size={17} /></div>)}
         </div>
-        <p className="content-note">Temas previstos para a estrutura do produto; confirme o conteúdo final do arquivo antes de publicar a oferta.</p>
+        <p className="content-note">Confira a descrição e o arquivo final do ebook para garantir que os tópicos desta página correspondam exatamente ao material entregue.</p>
       </section>
 
       <section className="audience section-wrap">
@@ -150,7 +150,7 @@ export default function App() {
       <section className="final-cta"><div className="final-ornament"><Sparkles size={28} /></div><div className="section-label">O PRIMEIRO PASSO É A CONSCIÊNCIA</div><h2>Uma nova maneira de olhar para seus pensamentos pode ser o começo de <em>uma nova jornada.</em></h2><p>Explore O Código da Manifestação e descubra práticas que podem ajudar você a desenvolver mais consciência, clareza e intenção no dia a dia.</p><div className="final-price">{PRICE}</div><CheckoutButton>QUERO COMEÇAR MINHA JORNADA <ArrowRight size={17} /></CheckoutButton></section>
     </main>
 
-    <footer className="footer"><a className="brand" href="#inicio"><span className="brand-mark"><Sparkles size={16} /></span><span>O CÓDIGO <i>DA MANIFESTAÇÃO</i></span></a><p>Um material de desenvolvimento pessoal.</p><div className="footer-links"><a href="#privacidade" onClick={(e) => { e.preventDefault(); window.alert("Adicione aqui o link da sua política de privacidade antes de publicar."); }}>Privacidade</a><a href="#termos" onClick={(e) => { e.preventDefault(); window.alert("Adicione aqui o link dos termos de uso antes de publicar."); }}>Termos de uso</a><a href="mailto:contato@seudominio.com">Contato</a></div><p className="disclaimer">O conteúdo é educacional e não constitui aconselhamento médico, psicológico ou financeiro. A Lei da Atração é apresentada como uma abordagem de desenvolvimento pessoal, não como garantia científica de resultados.</p><p className="copyright">© {new Date().getFullYear()} O Código da Manifestação. Todos os direitos reservados.</p></footer>
+    <footer className="footer"><a className="brand" href="#inicio"><span className="brand-mark"><Sparkles size={16} /></span><span>O CÓDIGO <i>DA MANIFESTAÇÃO</i></span></a><p>Um material de desenvolvimento pessoal.</p><div className="footer-links"><a href="/privacidade.html">Privacidade</a><a href="/termos.html">Termos de uso</a><a href="mailto:SEU-EMAIL-DE-CONTATO">Contato</a></div><p className="disclaimer">O conteúdo é educacional e não constitui aconselhamento médico, psicológico ou financeiro. A Lei da Atração é apresentada como uma abordagem de desenvolvimento pessoal, não como garantia científica de resultados.</p><p className="copyright">© {new Date().getFullYear()} O Código da Manifestação. Todos os direitos reservados.</p></footer>
 
     {showSticky && <div className="sticky-cta"><div><strong>{PRODUCT_NAME}</strong><span>{PRICE}</span></div><CheckoutButton>QUERO ACESSAR <ArrowRight size={15} /></CheckoutButton></div>}
   </div>;
