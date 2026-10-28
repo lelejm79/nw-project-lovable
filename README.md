@@ -4,24 +4,34 @@ Landing page VSL responsiva para o ebook **O Código da Manifestação**, com co
 
 ## Rodar localmente
 
+Requer Node.js instalado.
+
 ```bash
 npm install
 npm run dev
 ```
 
-## Configuração
+## Configurar checkout da Kiwify
 
-Crie um arquivo `.env.local` a partir de `.env.example` e configure:
+1. Crie/configure o produto na Kiwify e copie o **link público de checkout** do produto.
+2. Crie um arquivo `.env.local` na raiz do projeto (use `.env.example` como modelo).
+3. Cole o link real na variável `VITE_CHECKOUT_URL`, por exemplo: `VITE_CHECKOUT_URL=https://pay.kiwify.com.br/SEU-LINK-REAL`.
+4. Reinicie o servidor de desenvolvimento depois de alterar o `.env.local`.
+5. Teste todos os botões e confirme que abrem o checkout correto antes de anunciar.
 
-- `VITE_VSL_VIDEO_URL`: URL de um vídeo MP4 ou link de incorporação do YouTube/Vimeo.
-- `VITE_CHECKOUT_URL`: URL real de checkout (Kiwify, Hotmart, Eduzz ou outra plataforma).
+Não use o exemplo acima como URL real: substitua pelo link copiado da sua conta Kiwify. Sem um link válido, os botões avisam que o checkout ainda não foi configurado.
 
-Sem uma URL real de checkout, os botões exibem uma mensagem de configuração pendente e não simulam uma compra. Não coloque chaves secretas no frontend.
+## Vídeo de vendas (opcional)
 
-## Build
+Defina `VITE_VSL_VIDEO_URL` com a URL de um vídeo MP4 ou link de vídeo do YouTube/Vimeo. Se não houver VSL pronta, a página mantém o espaço de apresentação ilustrativo.
+
+## Build para publicação
 
 ```bash
 npm run build
+npm run preview
 ```
+
+A pasta gerada para publicação é `dist`. Em uma hospedagem como Vercel ou Cloudflare Pages, use o comando de build `npm run build` e a pasta de saída `dist`. Configure `VITE_CHECKOUT_URL` e `VITE_VSL_VIDEO_URL` nas variáveis de ambiente da hospedagem antes de publicar; variáveis `VITE_` são incluídas no código público, portanto não coloque segredos nelas.
 
 O conteúdo é educacional e de desenvolvimento pessoal. Não promete resultados financeiros, médicos ou pessoais garantidos.
