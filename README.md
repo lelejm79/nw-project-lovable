@@ -25,6 +25,10 @@ Não use o exemplo acima como URL real: substitua pelo link copiado da sua conta
 
 Defina `VITE_VSL_VIDEO_URL` com a URL de um vídeo MP4 ou link de vídeo do YouTube/Vimeo. Se não houver VSL pronta, a página mantém o espaço de apresentação ilustrativo.
 
+## Contato no rodapé (opcional)
+
+Defina `VITE_CONTACT_EMAIL` com um e-mail de atendimento real. Se estiver vazio, a página mostra “Contato em configuração” em vez de apontar para um endereço fictício.
+
 ## Build para publicação
 
 ```bash
